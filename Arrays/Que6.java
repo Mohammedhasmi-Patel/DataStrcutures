@@ -1,7 +1,5 @@
 class Solution {
-    // Function to sort the binary array in non-decreasing order
     public void binSort(int[] arr) {
-        // code here
         int i = 0;
         int zeroCount = 0;
         
@@ -26,5 +24,16 @@ class Solution {
         }
         
         
+    }
+}
+public void binSort(int[] arr) {
+    int zeroCount = 0;
+    for (int num : arr) {
+        if (num == 0) {
+            zeroCount++;
+        }
+    }
+    for (int i = 0; i < arr.length; i++) {
+        arr[i] = (i < zeroCount) ? 0 : 1;
     }
 }
