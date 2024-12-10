@@ -25,10 +25,9 @@ class Solution {
         int n = arr.length;
         int max = -1;
 
-        // Traverse from right to left
         for (int i = n - 1; i >= 0; i--) {
-            ans.add(max); // Add the current maximum to the result
-            max = Math.max(max, arr[i]); // Update the maximum value
+            ans.add(max);
+            max = Math.max(max, arr[i]); 
         }
 
         int start = 0;
@@ -43,7 +42,6 @@ class Solution {
 
         }
         
-        // ans.set(ans.size()-1,-1);
         return ans;
 
     }
